@@ -1,29 +1,73 @@
-set nocompatible " 오리지날 VI와 호환하지 않음
-set autoindent  " 자동 들여쓰기
-set cindent " C 프로그래밍용 자동 들여쓰기
-set smartindent " 스마트한 들여쓰기
-set wrap
-set nowrapscan " 검색할 때 문서의 끝에서 처음으로 안돌아감
-set nobackup " 백업 파일을 안만듬
-set visualbell " 키를 잘못눌렀을 때 화면 프레시
-set ruler " 화면 우측 하단에 현재 커서의 위치(줄,칸) 표시
-set shiftwidth=4 " 자동 들여쓰기 4칸
-set number " 행번호 표시, set nu 도 가능
-set fencs=utf-8 " 한글 파일은 euc-kr로, 유니코드는 유니코드로
-set fileencoding=utf-8 " 파일저장인코딩
-set tenc=utf-8      " 터미널 인코딩
-set encoding=utf-8 "utf-8로 인코딩하기
-set hlsearch " 검색어 강조, set hls 도 가능
-set ignorecase " 검색시 대소문자 무시, set ic 도 가능
-set tabstop=4 "  탭을 4칸으로
-set lbr
-set incsearch "  키워드 입력시 점진적 검색
-syntax on "  구문강조 사용
-filetype indent on "  파일 종류에 따른 구문강조
-set background=dark " 하이라이팅 lihgt / dark
-colorscheme desert  "  vi 색상 테마 설정
-set backspace=eol,start,indent "  줄의 끝, 시작, 들여쓰기에서 백스페이스시 이전줄로
-set history=1000 "  vi 편집기록 기억갯수 .viminfo에 기록
-set mouse=a "마우스 사용
-set incsearch "글자 입력시마다 매치되는 부분 표시
-set showmatch "현재 커서가 놓인 곳의 괄호 짝 표시
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+"
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+Plugin 'scrooloose/nerdtree'
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'valloric/youcompleteme'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'terryma/vim-multiple-cursors'
+
+set number
+set autoindent
+set cindent
+set smartindent
+set shiftwidth=4
+set encoding=utf-8
+set tabstop=4
+set backspace=eol,start,indent
+set mouse=a
+set incsearch
+set showmatch
+
+syntax enable
+set background=dark
+colorscheme solarized
+		
+let g:indent_guides_enable_on_vim_startup = 1
