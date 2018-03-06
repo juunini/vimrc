@@ -42,35 +42,35 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-Plugin 'scrooloose/nerdtree'
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"Plugin 'scrooloose/nerdtree'
+"autocmd vimenter * NERDTree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-Plugin 'ryanoasis/vim-devicons'
+"Plugin 'ryanoasis/vim-devicons'
 
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"Plugin 'scrooloose/syntastic'
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 Plugin 'tpope/vim-surround'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
-Plugin 'valloric/youcompleteme'
-let g:ycm_python_binary_path = 'python'
-let g:ycm_python_binary_path = '/usr/bin/python3'
+"Plugin 'valloric/youcompleteme'
+"let g:ycm_python_binary_path = 'python'
+"let g:ycm_python_binary_path = '/usr/bin/python3'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 
 set number
@@ -92,34 +92,34 @@ colorscheme solarized
 let g:indent_guides_enable_on_vim_startup = 1
 
 " loading the plugin 
-let g:webdevicons_enable = 1
+"let g:webdevicons_enable = 1
 " adding the flags to NERDTree 
-let g:webdevicons_enable_nerdtree = 1
+"let g:webdevicons_enable_nerdtree = 1
 " adding the custom source to unite 
-let g:webdevicons_enable_unite = 1
+"let g:webdevicons_enable_unite = 1
 " adding the column to vimfiler 
-let g:webdevicons_enable_vimfiler = 1
+"let g:webdevicons_enable_vimfiler = 1
 " adding to vim-airline's tabline 
-let g:webdevicons_enable_airline_tabline = 1
+"let g:webdevicons_enable_airline_tabline = 1
 " adding to vim-airline's statusline 
-let g:webdevicons_enable_airline_statusline = 1
+"let g:webdevicons_enable_airline_statusline = 1
 " ctrlp glyphs
-let g:webdevicons_enable_ctrlp = 1
+"let g:webdevicons_enable_ctrlp = 1
 " adding to flagship's statusline 
-let g:webdevicons_enable_flagship_statusline = 1
+"let g:webdevicons_enable_flagship_statusline = 1
 " turn on/off file node glyph decorations (not particularly useful)
-let g:WebDevIconsUnicodeDecorateFileNodes = 1
+"let g:WebDevIconsUnicodeDecorateFileNodes = 1
 " use double-width(1) or single-width(0) glyphs 
 " only manipulates padding, has no effect on terminal or set(guifont) font
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+"let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 " whether or not to show the nerdtree brackets around flags 
-let g:webdevicons_conceal_nerdtree_brackets = 1
+"let g:webdevicons_conceal_nerdtree_brackets = 1
 " the amount of space to use after the glyph character (default ' ')
-let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 " Force extra padding in NERDTree so that the filetype icons line up vertically 
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 " change the default character when no match found
 " enable folder/directory glyph flag (disabled by default with 0)
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " enable open and close folder/directory glyph flags (disabled by default with 0)
-let g:DevIconsEnableFoldersOpenClose = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
