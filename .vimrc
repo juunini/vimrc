@@ -63,7 +63,7 @@ filetype plugin indent on    " required
 "let g:syntastic_check_on_wq = 0
 
 Plugin 'tpope/vim-surround'
-"Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 "Plugin 'valloric/youcompleteme'
 "let g:ycm_python_binary_path = 'python'
