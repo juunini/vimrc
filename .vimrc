@@ -63,7 +63,7 @@ filetype plugin indent on    " required
 "let g:syntastic_check_on_wq = 0
 
 Plugin 'tpope/vim-surround'
-Plugin 'lifepillar/vim-solarized8'
+Plugin 'micah/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 "Plugin 'valloric/youcompleteme'
 "let g:ycm_python_binary_path = 'python'
@@ -87,7 +87,8 @@ set showmatch
 
 syntax enable
 set background=dark
-colorscheme solarized8
+colorscheme solarized
+set t_Co=256
 		
 let g:indent_guides_enable_on_vim_startup = 1
 
